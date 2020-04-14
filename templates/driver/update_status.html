@@ -1,0 +1,11 @@
+{% extends './driver_base.html' %}
+{% load static %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <!-- <input type="text" name="" id=""> -->
+    <input type="submit" value="Update" name="Submit">
+
+</form>
+{% endblock %}

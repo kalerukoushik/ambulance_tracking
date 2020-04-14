@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    <link rel="stylesheet" href="{% static 'css/emer.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 8%; bottom: 0;right: 0; width: 80%; }
+    </style>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
+    type="text/css"
+    />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Ambulance Finding</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 5%;">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link active" href="{% url 'emergency' %}">Emergency <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hospitals">Hospitals</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item active">
+                <a class="nav-link">Welcome Srijith Kumar</a>     <!--{{driver.username}}-->
+            </li>
+            <li class="nav-item">
+                <a href="login" class="nav-link">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      {% block content %}
+
+      {% endblock %}
+
+    </body>
+    </html>

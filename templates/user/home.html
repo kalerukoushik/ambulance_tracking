@@ -1,0 +1,52 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block content %}
+        
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" style="margin-top: 15%;">
+                <h3>Upload your location <br> in case of Emergency</h3><br>
+                <form action="home" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="location" id="location" class="form-control" style="width: 50%;" placeholder="Coordinates"><br>
+                    <input type="number" name="phone" id="" class="form-control" style="width: 50%;" placeholder="Mobile No."><br>
+                    <input type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" value="Upload Location">
+                </form>
+                <div>
+                  {% for msg in messages %}
+                  <br><h5 style="color: lightgreen;">Success! {{msg}}</h5>
+                  {% endfor %}
+                </div>
+            </div>
+            <div class="col-sm" style="height: 600px; margin-top: 5%; ">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoicm9iaW5ob29kNWI3IiwiYSI6ImNrN3Q4ZzNkdTBzdDEzbW91bXJmYmZyazkifQ.-TbB_9K9jFUtYdqbWxVsLw';
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [78.658839, 17.162138], // starting position
+            zoom: 11,
+            pitch: 60, // pitch in degrees
+            bearing: -60  // starting zoom
+        });
+        
+        // Add geolocate control to the map.
+        var geolocate = new mapboxgl.GeolocateControl();
+        map.addControl(geolocate);
+        map.addControl(new mapboxgl.FullscreenControl());
+
+            geolocate.on('geolocate', function(e) {
+                var lon = e.coords.longitude;
+                var lat = e.coords.latitude
+                var position = [lon, lat];
+                //console.log(position);
+                document.getElementById("location").value=position;
+            });
+    </script>
+    {% endblock content %}
