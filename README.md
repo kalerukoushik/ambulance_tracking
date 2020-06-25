@@ -14,9 +14,10 @@
   
 ## Database setup
   1. This is it. But before running the server we should do something with the database setup.
-  2. Download PostgreSQL - ```https://www.postgresql.org/download/``` and pdAdmin tool ```https://www.pgadmin.org/download/``` which supports your OS.
-  3. Now open the command prompt by activating the environment setup.
-  4. Type following commands to migrate the database.
+  2. Download and install PostgreSQL - ```https://www.postgresql.org/download/``` and pdAdmin tool ```https://www.pgadmin.org/download/``` which supports your OS.
+  3. While installing PostgreSQL, create a password which will be asked. Open PgAdmin and type the password which you just created while installing PostgreSQL and create the database amb_track.
+  4. Now open the command prompt by activating the environment setup.
+  5. Type following commands to migrate the database.
     i. ```python manage.py makemigrations```
     ii. ```python manage.py migrate```
 ## Run server
