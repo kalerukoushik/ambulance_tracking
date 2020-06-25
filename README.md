@@ -1,7 +1,7 @@
 # Ambulance and Patient Tracking
 
 ## Instructions
-  1. open Commnd prompt or Terminal
+  1. Open Commnd prompt or Terminal
   2. Download the project folder using command https://github.com/kalerukoushik/ambulance_tracking.git 
   (this won't work in windows unless you download Git - https://git-scm.com/downloads) or just download the zip file.
   3. cd ambulance_tracking
@@ -14,7 +14,7 @@
   
 ## Database setup
   1. This is it. But before running the server we should do something with the database setup.
-  2. Download PostgreSQL - ```https://www.postgresql.org/download/``` and pdAdmin tool ```https://www.pgadmin.org/download/``` which supports yout OS.
+  2. Download PostgreSQL - ```https://www.postgresql.org/download/``` and pdAdmin tool ```https://www.pgadmin.org/download/``` which supports your OS.
   3. Now open the command prompt by activating the environment setup.
   4. Type following commands to migrate the database.
     i. ```python manage.py makemigrations```
@@ -28,7 +28,7 @@
   ### Admin setup
   1. To open admin type ```localhost:8000/admin```
   2. Django Administration page will be displayed which asks for username and password which you don't have at present.
-  3. To create it open cmd in the virtual environment and type ```python manage.py createsuperuser```.
+  3. To create it, open cmd in the virtual environment and type ```python manage.py createsuperuser```.
   4. Type in the username, email, and password to create the admin account.
   5. Now open the admin page and type in those creddentials those which you just created.
   6. Tada, Thats it, The project is now up and running completely.
