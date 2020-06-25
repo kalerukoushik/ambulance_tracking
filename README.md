@@ -1,7 +1,7 @@
 # Ambulance and Patient Tracking
 
 ## Instructions
-  1. Open Commnd prompt or Terminal
+  1. Open Command prompt or Terminal
   2. Download the project folder using command https://github.com/kalerukoushik/ambulance_tracking.git 
   (this won't work in windows unless you download Git - https://git-scm.com/downloads) or just download the zip file.
   3. cd ambulance_tracking
