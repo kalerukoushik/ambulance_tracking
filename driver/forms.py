@@ -5,4 +5,4 @@ from user.models import *
 class UpdateForm(ModelForm):
     class Meta:
         model = userCoordinates
-        fields = ['location', 'pick_status']
+        fields = ['location','description', 'pick_status', 'driver_loc', 'driver_picked']

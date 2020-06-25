@@ -22,7 +22,7 @@ def login(request):
 
         if Driver.objects.filter(username=username).exists() and Driver.objects.filter(password=password).exists():
             driver = Driver.objects.all()
-            return redirect('emergency')
+            return redirect('driver-emergency')
         else:
             messages.info(request, 'Invalid username or password')
             return redirect('login')
@@ -32,10 +32,11 @@ def login(request):
 def update_status(request, pk):
     
     status = userCoordinates.objects.get(id=pk)
+    
     form = UpdateForm(instance= status)
     if request.method == 'POST':
         form = UpdateForm(request.POST, instance = status)
         form.save()
-        return redirect('emergency')
+        return redirect('driver-emergency')
     context = {'form': form}
     return render(request, 'driver/update_status.html', context)

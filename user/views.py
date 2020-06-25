@@ -7,7 +7,8 @@ def home(request):
     if request.method == 'POST':
         location= request.POST['location']
         phone= request.POST['phone']
-        coordinates = userCoordinates(location= location, phone=phone)
+        description= request.POST['description']
+        coordinates = userCoordinates(location= location, phone=phone, description=description)
         coordinates.save()
         messages.success(request, 'Coordinates sent successfully')
         return redirect('home')
@@ -23,3 +24,8 @@ def hospitals(request):
 
 def first_aid(request):
     return render(request, 'user/first-aid.html')
+
+def track(request):
+    driver_location = userCoordinates.objects.last()
+    # driver_location = driver_location[-1]
+    return render(request, 'user/track.html', {'driver_location': driver_location})
