@@ -9,7 +9,7 @@ this location and will reach the spot using the built-in maps in this website.
   1. Open Command prompt or Terminal
   2. Download the project folder using command https://github.com/kalerukoushik/ambulance_tracking.git 
   (this won't work in windows unless you download Git - https://git-scm.com/downloads) or just download the zip file.
-  3. cd ambulance_tracking
+  3. ```cd ambulance_tracking```
   (Make sure you installed Python)
   4. Its better to use a Virtual environment. Install it by using ```pip install virtualenvwrapper-win```
   5. After that, type the command ```mkvirtualenv <name>``` to create a virtual environment.
