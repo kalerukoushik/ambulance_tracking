@@ -26,7 +26,8 @@ this location and will reach the spot using the built-in maps in this website.
   4. If you feel this installation process is not worth for you, just follow the below steps:
   Find and open the ```settings.py``` file in ambulance_tracking directory, 
       Search for this code
-      ```DATABASES = {
+      ```
+      DATABASES = {
           'default': {
               'ENGINE': 'django.db.backends.postgresql',
               'NAME': 'amb_track',
@@ -49,6 +50,21 @@ this location and will reach the spot using the built-in maps in this website.
   6. Type following commands to migrate the database.
     i. ```python manage.py makemigrations```
     ii. ```python manage.py migrate```
+    
+## Maps Setup
+  Now that we need Maps to get location of someone, this uses MapBox API which is free by the way unlike Google Maps API.
+  Open https://account.mapbox.com/ and signin and now click on ```+ create a token``` button and follow the steps to create it.
+  
+  You need to add your access token in a few places in the project, in script section at variable accessToken
+  1. templates/user/ambulance.html
+  2. templates/user/home.html
+  3. templates/user/hospitals.html
+  4. templates/user/track.html
+  
+  5. templates/driver/emergency.html
+  6. templates/driver/hospitals.html
+  7. templates/driver/update_status.html
+  
 ## Run server
   1. Now, you can run the project by typing ```python manage.py runserver```.
   2. Open the webpage by using typing ```localhost:8000/home``` in your favourite browser.
