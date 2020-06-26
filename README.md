@@ -23,8 +23,8 @@ this location and will reach the spot using the built-in maps in this website.
   2. Download and install PostgreSQL - ```https://www.postgresql.org/download/``` and pdAdmin tool ```https://www.pgadmin.org/download/``` which supports your OS.
   3. While installing PostgreSQL, create a password which will be asked. Open PgAdmin and type the password which you just created while installing PostgreSQL and create the database amb_track.
   #### OR
-  4. If you feel this installation process is not worth for you, you follow the below steps:
-      Find and open the ```settings.py``` file in ambulance_tracking directory, 
+  4. If you feel this installation process is not worth for you, just follow the below steps:
+  Find and open the ```settings.py``` file in ambulance_tracking directory, 
       Search for this code
       ```DATABASES = {
           'default': {
@@ -35,7 +35,7 @@ this location and will reach the spot using the built-in maps in this website.
               'HOST': 'localhost'
           }
         }```
-        and replace it with 
+    and replace it with
         ```DATABASES = {
               'default': {
                   'ENGINE': 'django.db.backends.sqlite3',
