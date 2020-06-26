@@ -1,5 +1,10 @@
 # Ambulance and Patient Tracking
 
+### Basic Information
+This is a Django based web application used to upload the
+exact co-ordinates of an accident location, where driver can get
+this location and will reach the spot using the built-in maps in this website.
+
 ## Instructions
   1. Open Command prompt or Terminal
   2. Download the project folder using command https://github.com/kalerukoushik/ambulance_tracking.git 
@@ -10,6 +15,7 @@
   5. After that, type the command ```mkvirtualenv <name>``` to create a virtual environment.
   6. Then activate the environment by ```workon <name>```.
   7. Now it's time to install all the modules needed to run this project.
+  8. First install Django using ```pip install django```.
   8. Type ```pip install -r requirements.txt```.
   
 ## Database setup
