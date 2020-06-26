@@ -34,16 +34,16 @@ this location and will reach the spot using the built-in maps in this website.
               'PASSWORD': '12345',
               'HOST': 'localhost'
           }
-        }``` 
+        }
         
    and replace it with
         
-        ```DATABASES = {
+      DATABASES = {
               'default': {
                   'ENGINE': 'django.db.backends.sqlite3',
                   'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
               }
-          }```
+          }
       
   5. Now open the command prompt by activating the environment setup.
   6. Type following commands to migrate the database.
