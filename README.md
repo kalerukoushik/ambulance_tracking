@@ -34,8 +34,10 @@ this location and will reach the spot using the built-in maps in this website.
               'PASSWORD': '12345',
               'HOST': 'localhost'
           }
-        }```
-    and replace it with
+        }``` 
+        
+   and replace it with
+        
         ```DATABASES = {
               'default': {
                   'ENGINE': 'django.db.backends.sqlite3',
