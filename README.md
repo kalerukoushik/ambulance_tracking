@@ -22,8 +22,29 @@ this location and will reach the spot using the built-in maps in this website.
   1. This is it. But before running the server we should do something with the database setup.
   2. Download and install PostgreSQL - ```https://www.postgresql.org/download/``` and pdAdmin tool ```https://www.pgadmin.org/download/``` which supports your OS.
   3. While installing PostgreSQL, create a password which will be asked. Open PgAdmin and type the password which you just created while installing PostgreSQL and create the database amb_track.
-  4. Now open the command prompt by activating the environment setup.
-  5. Type following commands to migrate the database.
+  #### OR
+  4. If you feel this installation process is not worth for you, you follow the below steps:
+      Find and open the ```settings.py``` file in ambulance_tracking directory, 
+      Search for this code
+      ```DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.postgresql',
+              'NAME': 'amb_track',
+              'USER': 'postgres',
+              'PASSWORD': '12345',
+              'HOST': 'localhost'
+          }
+        }```
+        and replace it with 
+        ```DATABASES = {
+              'default': {
+                  'ENGINE': 'django.db.backends.sqlite3',
+                  'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+              }
+          }```
+      
+  5. Now open the command prompt by activating the environment setup.
+  6. Type following commands to migrate the database.
     i. ```python manage.py makemigrations```
     ii. ```python manage.py migrate```
 ## Run server
